@@ -1,10 +1,11 @@
 import React from 'react'
+import Header from './Sections/Header'
 import './styles/app.scss'
 
 const App = () => {
     return (
         <div>
-            <h1>TOI</h1>
+            <Header />
         </div>
     )
 }
