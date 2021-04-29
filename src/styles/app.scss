@@ -12,6 +12,16 @@ body {
     font-weight: 400;
 }
 
+.double-dot-line {
+    height: 3px;
+    display: block;
+    border-top: 1px dotted #1a1a1a;
+    border-bottom: 1px dotted #1a1a1a;
+    margin: 40px 0;
+    width: 100%;
+}
+
 @import './header';
 @import './headermenu';
 @import './livenews';
+@import './entertainment';
