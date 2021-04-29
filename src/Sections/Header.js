@@ -2,7 +2,7 @@ import { Container } from '@material-ui/core';
 import React from 'react'
 import HeaderTop from '../components/HeaderTop';
 
-const Header = ({ }) => {
+const Header = () => {
     return (
         <div>
             <HeaderTop />
