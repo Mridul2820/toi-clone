@@ -1,9 +1,8 @@
 import { Container } from '@material-ui/core';
 import React from 'react'
-import HeaderMenu from '../components/HeaderMenu';
 import HeaderTop from '../components/HeaderTop';
 
-const Header = () => {
+const Header = ({ }) => {
     return (
         <div>
             <HeaderTop />
@@ -16,7 +15,6 @@ const Header = () => {
                     />
                 </div>
             </Container>
-            <HeaderMenu />
         </div>
     )
 }

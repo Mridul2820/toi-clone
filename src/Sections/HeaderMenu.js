@@ -1,26 +1,8 @@
 import { Container } from '@material-ui/core'
 import SearchIcon from '@material-ui/icons/Search';
 import DehazeIcon from '@material-ui/icons/Dehaze';
-import { useEffect, useState } from 'react';
 
-const HeaderMenu = () => {
-    const [stickMenu, setStickMenu] = useState(false)
-
-    const transitionNavBar = () => {
-        if (window.scrollY > 100) {
-            setStickMenu(true)
-        }
-        else {
-            setStickMenu(false)
-        }
-    }
-
-    useEffect(() => {
-        window.addEventListener('scroll', transitionNavBar)
-
-        return () => window.addEventListener('scroll', transitionNavBar)
-    }, [])
-
+const HeaderMenu = ({ stickMenu }) => {
     return (
         <div className={`headerMenu ${stickMenu ? 'headerMenuSticky' : ''}`}>
             <Container>

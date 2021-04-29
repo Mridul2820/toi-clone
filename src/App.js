@@ -1,16 +1,32 @@
+import { useEffect, useState } from 'react';
 import { Container } from '@material-ui/core'
-import React from 'react'
 import Header from './Sections/Header'
 import LiveNews from './Sections/LiveNews'
 import './styles/app.scss'
-
-// const baseURL = 'https://content.guardianapis.com/'
-// const apiKey = `api-key=${process.env.REACT_APP_API_KEY}`
+import HeaderMenu from './Sections/HeaderMenu';
 
 const App = () => {
+    const [stickMenu, setStickMenu] = useState(false)
+
+    const transitionNavBar = () => {
+        if (window.scrollY > 100) {
+            setStickMenu(true)
+        }
+        else {
+            setStickMenu(false)
+        }
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', transitionNavBar)
+
+        return () => window.addEventListener('scroll', transitionNavBar)
+    }, [])
+
     return (
         <div>
             <Header />
+            <HeaderMenu stickMenu={stickMenu} />
             <Container>
                 <LiveNews />
             </Container>
