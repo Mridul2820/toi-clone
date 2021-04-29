@@ -1,12 +1,13 @@
+import { truncate } from "../utils";
 
-const LiveOthers = ({ liveOthers }) => {
+const LiveOthers = ({ liveNews }) => {
     return (
         <div className="liveOthers">
-        {liveOthers && liveOthers.map(liveOther => (
-            <div key={liveOther.id} className="liveOther__single">
-                <p>{liveOther.webTitle}</p>
+        {liveNews && liveNews.map(liveNew => (
+            <div key={liveNew.id} className="liveOther__single">
+                <p>{truncate(liveNew.webTitle, 50)}</p>
                 <div className="liveOther__img">
-                    <img src={liveOther.fields.thumbnail} alt={liveOther.webTitle}/>
+                    <img src={liveNew.fields.thumbnail} alt={liveNew.webTitle}/>
                 </div>
             </div>
         ))

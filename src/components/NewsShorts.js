@@ -1,13 +1,13 @@
 import React from 'react'
 
-const NewsShorts = ({ liveOthers }) => {
+const NewsShorts = ({ liveNews }) => {
     return (
         <div className="newsShorts">
-        {liveOthers && liveOthers.map(liveOther => (
-            <ul key={liveOther.id} className="newsShorts__single">
+        {liveNews && liveNews.map(liveShorts => (
+            <ul key={liveShorts.id} className="newsShorts__single">
                 <li>
                     <span>
-                        {liveOther.webTitle}
+                        {liveShorts.webTitle}
                     </span>
                 </li>
             </ul>

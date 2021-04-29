@@ -40,11 +40,13 @@
 .liveOthers {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
 
     .liveOther__single {
-        padding: 20px 0px;
-        margin: 0 16px;
+        padding: 15px 0px;
         display: flex;
+        align-items: center;
+        justify-content: space-between;
         border-top: 1px dotted rgba(0,0,0,.3);
 
         &:first-child,
@@ -54,17 +56,28 @@
 
         p {
             font-size: 13px;
+            width: 80%;
+
         }
 
         .liveOther__img {
-            margin-left: 4px;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-left: 5px;
+            width: 80px;
 
             img {
                 width: 80px;
                 height: 45px;
-                vertical-align: bottom;
                 object-fit: cover;
-                border-radius: 4px;
+                vertical-align: bottom;
+                transition: all 1s;
+            }
+    
+            &:hover {
+                img {
+                    transform: scale(1.1);
+                }
             }
         }
     }

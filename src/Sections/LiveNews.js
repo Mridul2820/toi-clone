@@ -9,36 +9,33 @@ const baseURL = 'https://content.guardianapis.com'
 const apiKey = `api-key=${process.env.REACT_APP_API_KEY}`
 
 const LiveNews = () => {
-    const [liveOthers, setLiveOthers] = useState()
+    const [liveNews, setLiveNews] = useState()
 
-    const fetchLiveOthers = async() => {
+    const fetchLiveNews = async() => {
         const dataLiveOthers = await axios.get(`${baseURL}/search?q=india&page-size=12&show-fields=thumbnail&${apiKey}`)
 
-        // console.log(dataLiveOthers.data.response.results);
 
-        setLiveOthers(dataLiveOthers.data.response.results)
+        setLiveNews(dataLiveOthers.data.response.results)
     }
 
     useEffect(() => {
-        fetchLiveOthers()
+        fetchLiveNews()
         // eslint-disable-next-line
     }, [])
 
-    
     return (
         <div className="liveNews">
             <div className="liveNews__left">
-                <LiveMain />
-                <LiveOthers liveOthers={liveOthers} />
+                <LiveMain liveNews={liveNews} />
+                <LiveOthers liveNews={liveNews} />
             </div>
 
             <div className="liveNews__center">
-                <NewsVideos />
+                <NewsVideos liveNews={liveNews} />
             </div>
             <div className="liveNews__right">
-                <NewsShorts liveOthers={liveOthers}/>
+                <NewsShorts liveNews={liveNews} />
             </div>
-
         </div>
     )
 }

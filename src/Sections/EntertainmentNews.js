@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import CropOriginalIcon from '@material-ui/icons/CropOriginal';
 import axios from 'axios';
+import { truncate } from "../utils";
 
 const baseURL = 'https://content.guardianapis.com'
 const apiKey = `api-key=${process.env.REACT_APP_API_KEY}`
@@ -41,7 +42,7 @@ const EntertainmentNews = () => {
                                 alt={entNews[0].webTitle}
                             />
                             <h2 className="liveNews__main-title">
-                                {entNews[0].webTitle}
+                                {truncate(entNews[0].webTitle, 75)}
                             </h2>
                         </div>
                         }
@@ -55,7 +56,7 @@ const EntertainmentNews = () => {
                                     />
                                 </div>
                                 <p>
-                                    {entNew.webTitle}
+                                    {truncate(entNew.webTitle, 50)}
                                 </p>
                             </div>
                         ))
@@ -92,7 +93,7 @@ const EntertainmentNews = () => {
                                 </h3>
                             </div>
                             <p>
-                                {entNew.webTitle}
+                                {truncate(entNew.webTitle, 25)}
                             </p>
                         </div>
                     ))
