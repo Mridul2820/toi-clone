@@ -1,16 +1,43 @@
 import { Container } from '@material-ui/core'
 import SearchIcon from '@material-ui/icons/Search';
 import DehazeIcon from '@material-ui/icons/Dehaze';
+import { useEffect, useState } from 'react';
 
 const HeaderMenu = () => {
+    const [stickMenu, setStickMenu] = useState(false)
+
+    const transitionNavBar = () => {
+        if (window.scrollY > 100) {
+            setStickMenu(true)
+        }
+        else {
+            setStickMenu(false)
+        }
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', transitionNavBar)
+
+        return () => window.addEventListener('scroll', transitionNavBar)
+    }, [])
 
     return (
-        <div className="headerMenu">
+        <div className={`headerMenu ${stickMenu ? 'headerMenuSticky' : ''}`}>
             <Container>
                 <div className="headerMenu__container">
-                    <div className="headerMenu__category">
-                        <h2 className="headerMenu__logo">
-                            <a className="headerMenu__toi" href="https://timesofindia.indiatimes.com/">
+                    <div 
+                        className="headerMenu__category"
+                        style={{
+                            transform: stickMenu ? 'translateX(0px)' : 'translateX(-40px)',
+                            transition: 'all .5s'
+                        }}
+                    >
+                        <h2 
+                        style={{
+                            opacity: stickMenu ? 1 : 0,
+                            transition: 'all .5s'
+                        }}>
+                            <a className="headerMenu__logo" href="https://timesofindia.indiatimes.com/">
                                 TOI
                             </a>
                         </h2>
