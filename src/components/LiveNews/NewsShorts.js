@@ -6,9 +6,13 @@ const NewsShorts = ({ liveNews }) => {
         {liveNews && liveNews.slice(20, 39).map(liveShorts => (
             <ul key={liveShorts.id} className="newsShorts__single">
                 <li>
-                    <span>
-                        {liveShorts.webTitle}
-                    </span>
+                    <a 
+                        href={liveShorts.webUrl} 
+                        target="_blank" 
+                        rel="noreferrer"
+                    >
+                        <span>{liveShorts.webTitle}</span>
+                    </a>
                 </li>
             </ul>
         ))

@@ -14,7 +14,8 @@ const LiveNews = () => {
     const fetchLiveNews = async() => {
         const dataLiveOthers = await axios.get(`${baseURL}/search?q=india&page-size=40&show-fields=thumbnail&${apiKey}`)
 
-
+        // console.log(dataLiveOthers.data.response.results);
+        
         setLiveNews(dataLiveOthers.data.response.results)
     }
 

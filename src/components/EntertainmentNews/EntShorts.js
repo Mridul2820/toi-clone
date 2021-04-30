@@ -6,7 +6,13 @@ const EntShorts = ({ entNews }) => {
         {entNews && entNews.slice(15, 27).map(entNew => (
             <ul key={entNew.id} className="entertainment__leftBottom--single">
                 <li>
-                    <span>{entNew.webTitle}</span>
+                    <a 
+                        href={entNew.webUrl} 
+                        target="_blank" 
+                        rel="noreferrer"
+                    >
+                        <span>{entNew.webTitle}</span>
+                    </a>
                 </li>
             </ul>
         ))

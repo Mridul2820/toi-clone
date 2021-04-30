@@ -16,7 +16,7 @@ const EntertainmentNews = () => {
     const fetchEntNews = async() => {
         const dataEntNews = await axios.get(`${baseURL}/search?q=india&tag=film/film,tone/reviews&page-size=30&show-fields=thumbnail&${apiKey}`)
 
-        console.log(dataEntNews.data.response.results);
+        // console.log(dataEntNews.data.response.results);
 
         setEntNews(dataEntNews.data.response.results)
     }
