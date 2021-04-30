@@ -15,10 +15,11 @@ const HeaderMenu = ({ stickMenu }) => {
                         }}
                     >
                         <h2 
-                        style={{
-                            opacity: stickMenu ? 1 : 0,
-                            transition: 'all .5s'
-                        }}>
+                            style={{
+                                opacity: stickMenu ? 1 : 0,
+                                transition: 'all .5s'
+                            }}
+                        >
                             <a className="headerMenu__logo" href="https://timesofindia.indiatimes.com/">
                                 TOI
                             </a>
@@ -51,7 +52,6 @@ const HeaderMenu = ({ stickMenu }) => {
                     </div>
                 </div>
             </Container>
-
         </div>
     )
 }
