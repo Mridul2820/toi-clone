@@ -193,7 +193,20 @@ const Footer = () => {
 
                 <div className="footer__copy">
                     <p>
-                        Copyright &copy; {year} Bennett, Coleman &amp; Co. Ltd. This is a Clone Version.
+                        Copyright &copy; {year} by 
+                        <a 
+                            target="_blank" 
+                            rel="noreferrer" 
+                            href="https://github.com/Mridul2820">
+                            Mridul
+                        </a> 
+                        . This is a Clone Version, Made with 
+                        <a 
+                            target="_blank" 
+                            rel="noreferrer" 
+                            href="https://open-platform.theguardian.com/">
+                            The Guardian API
+                        </a>  
                     </p>
                 </div>
             </Container>

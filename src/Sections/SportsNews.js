@@ -15,7 +15,7 @@ const SportsNews = () => {
     const fetchSportsNews = async() => {
         const dataSportsNews = await axios.get(`${baseURL}/search?q=ipl%2Ccricket&page-size=40&show-fields=thumbnail&${apiKey}`)
 
-        console.log(dataSportsNews.data.response.results);
+        // console.log(dataSportsNews.data.response.results);
         
         setSportsNews(dataSportsNews.data.response.results)
     }
