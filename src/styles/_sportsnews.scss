@@ -1,0 +1,148 @@
+.sportsNews__heading {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+
+    .heading-arrow {
+        margin-left: 4px;
+        height: 20px;
+        width: 20px;
+    }
+}
+
+.sportsNews__wrapper {
+    margin-top: 10px;
+    display: flex;
+
+    .sportsNews__left {
+        width: 66.66667%;
+        padding-left: 5px;
+        border-right: 1px dotted #a5a5a5;
+    }
+
+    .sportsNews__right {
+        max-width: 33.33333%;
+    }
+}
+
+.sportsNews__leftTop {
+    display: flex;
+}
+
+.sportsNews__main {
+    width: 50%;
+    padding-right: 20px;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        object-fit: cover;
+        vertical-align: bottom;
+        transition: all 1s;
+    }
+
+    &:hover {
+        img {
+            transform: scale(1.1);
+        }
+    }
+
+    .sportsNews__main-title {
+        position: absolute;
+        padding: 0 16px 12px;
+        bottom: 0;
+        left: 0;
+        color: #fff;
+        font-size: 16px;
+        text-shadow: 0 2px 8px rgba(0, 0, 0, .4);
+    }
+}
+
+.sportsNews__shorts {
+    width: 50%;
+    padding: 0 16px;
+
+    ul {
+        li {
+            padding: 8px 0;
+            margin-left: 15px;
+            border-bottom: 1px dotted #a5a5a5;
+
+            span {
+                font-size: 13px;
+            }
+        }
+    }
+}
+
+.sportsNews__leftBottom {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-top: 25px;
+    padding-right: 16px;
+
+    div {
+        border-radius: 5px;
+        overflow: hidden;
+        margin-bottom: 5px;
+
+        img {
+            width: 100%;
+            object-fit: cover;
+            vertical-align: bottom;
+            transition: all 1s;
+        }
+
+        &:hover {
+            img {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    p {
+        font-size: 13px;
+    }
+}
+
+.sportsNews__right {
+    padding-left: 16px;
+
+    .sportsNews__rightSingle {
+        padding: 15px 0px;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+        border-top: 1px dotted rgba(0,0,0,.3);
+
+        p {
+            font-size: 13px;
+            width: 80%;
+        }
+
+        div {
+            border-radius: 5px;
+            overflow: hidden;
+            margin-right: 8px;
+            width: 80px;
+
+            img {
+                width: 80px;
+                height: 45px;
+                object-fit: cover;
+                vertical-align: bottom;
+                transition: all 1s;
+            }
+    
+            &:hover {
+                img {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}

@@ -2,14 +2,14 @@
     border-top: 2px solid #1a1a1a;
     margin-top: 40px;
     padding: 24px 0 0;
-}
+    
+    ul{
+        list-style: none;
 
-ul{
-    list-style: none;
-
-    li {
-        font-size: 12px;
-        cursor: pointer;
+        li {
+            font-size: 12px;
+            cursor: pointer;
+        }
     }
 }
 

@@ -6,6 +6,7 @@ import './styles/app.scss'
 import HeaderMenu from './Sections/HeaderMenu';
 import EntertainmentNews from './Sections/EntertainmentNews';
 import Footer from './Sections/Footer';
+import SportsNews from './Sections/SportsNews';
 
 const App = () => {
     const [stickMenu, setStickMenu] = useState(false)
@@ -32,6 +33,7 @@ const App = () => {
             <Container>
                 <LiveNews />
                 <EntertainmentNews />
+                <SportsNews />
             </Container>
             <Footer />
         </div>
