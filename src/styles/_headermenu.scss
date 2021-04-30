@@ -37,9 +37,15 @@
         z-index: 1;
     }
 
-    p {
-        font-size: 12px;
-        padding: 12px 9px;
+    ul {
+        list-style: none;
+        display: flex;
+
+        li {
+            font-size: 12px;
+            padding: 12px 9px;
+            cursor: pointer;
+        }
     }
 }
 

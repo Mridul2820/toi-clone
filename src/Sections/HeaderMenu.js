@@ -24,22 +24,25 @@ const HeaderMenu = ({ stickMenu }) => {
                                 TOI
                             </a>
                         </h2>
-                        <p>Briefs</p>
-                        <p>Videos</p>
-                        <p>City</p>
-                        <p>India</p>
-                        <p>World</p>
-                        <p>Business</p>
-                        <p>Tech</p>
-                        <p>Cricket</p>
-                        <p>Sports</p>
-                        <p>Entertainment</p>
-                        <p>TV</p>
-                        <p>Web Series</p>
-                        <p>Life &amp; Style</p>
-                        <p>Education</p>
-                        <p>Photos</p>
-                        <p>Blog</p>
+                        <ul>
+                            <li>Briefs</li>
+                            <li>Videos</li>
+                            <li>City</li>
+                            <li>India</li>
+                            <li>World</li>
+                            <li>Business</li>
+                            <li>Tech</li>
+                            <li>Cricket</li>
+                            <li>Sports</li>
+                            <li>Entertainment</li>
+                            <li>TV</li>
+                            <li>Web Series</li>
+                            <li>Life &amp; Style</li>
+                            <li>Education</li>
+                            <li>Photos</li>
+                            <li>Blog</li>                            
+                        </ul>
+
                     </div>
                     <div className="headerMenu__right">
                         <div className="toi-plus">
