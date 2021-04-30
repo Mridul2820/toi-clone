@@ -1,9 +1,9 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import LiveMain from '../components/LiveMain'
-import LiveOthers from '../components/LiveOthers'
-import NewsShorts from '../components/NewsShorts'
-import NewsVideos from '../components/NewsVideos'
+import LiveMain from '../components/LiveNews/LiveMain'
+import LiveOthers from '../components/LiveNews/LiveOthers'
+import NewsShorts from '../components/LiveNews/NewsShorts'
+import NewsVideos from '../components/LiveNews/NewsVideos'
 
 const baseURL = 'https://content.guardianapis.com'
 const apiKey = `api-key=${process.env.REACT_APP_API_KEY}`
@@ -12,7 +12,7 @@ const LiveNews = () => {
     const [liveNews, setLiveNews] = useState()
 
     const fetchLiveNews = async() => {
-        const dataLiveOthers = await axios.get(`${baseURL}/search?q=india&page-size=12&show-fields=thumbnail&${apiKey}`)
+        const dataLiveOthers = await axios.get(`${baseURL}/search?q=india&page-size=40&show-fields=thumbnail&${apiKey}`)
 
 
         setLiveNews(dataLiveOthers.data.response.results)
