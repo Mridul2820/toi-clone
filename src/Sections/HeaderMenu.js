@@ -17,6 +17,7 @@ const HeaderMenu = ({ stickMenu }) => {
                         <h2 
                             style={{
                                 opacity: stickMenu ? 1 : 0,
+                                visibility: stickMenu ? "visible" : "hidden",
                                 transition: 'all .5s'
                             }}
                         >
